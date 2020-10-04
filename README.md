@@ -4,7 +4,8 @@
 ## **Result's** ##
 Comparing "**DAQO**" return's from  **2017** and **2018**. "**DAQO**" isn't the right invesment **Steve's** parent's should invest in. Although in **2017** **DAQO** had a succesful year coming in at **("199.4%")** return . In **2018** **DAQO** had a signifciant loss of **("-62.2%")** in stock's.
 
-![VBA_Challenge_2017_2018_Results](https://user-images.githubusercontent.com/71118429/95006303-028f5000-05b8-11eb-8770-10d9e291d05a.png) 
+![VBA_Challenge_2017_2018_Results](https://user-images.githubusercontent.com/71118429/95020568-c93efa80-0620-11eb-8a9d-cd46f4b6280e.png)
+
 
 Based on my analysis and research . I would highly recommened **Steve's** parent's not to invest in **DAQO** . Although most of the stock's we analyzed including **DAQO** didn't thrive in **2018** in particular there were two stock's or **"green energy company's"** that profited throughout the year and prospered in return's. In **2018** **"ENPH"** return's were **("81.9%")** and **RUN** return's were **("84%")**. These two stock's are worth investing.
 
