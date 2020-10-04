@@ -10,6 +10,54 @@ Based on my analysis and research . I would highly recommened **Steve's** parent
 
 ![VBA_Challenge_2017_INv](https://user-images.githubusercontent.com/71118429/95006798-05407400-05bd-11eb-8122-e53d2fa835b4.png)
 ##  **Refactored Execution Time's Compared To Original Execution Time's** ##
+
+**Our New VBA Code**
+
+    Worksheets("2018").Activate
+
+    'get the number of rows to loop over
+    RowCount = Cells(Rows.Count, "A").End(xlUp).Row
+
+    Dim startingPrice(12) As Single
+    Dim endingPrice(12) As Single
+    Dim totalVolume(12) As Long
+    
+    tickerIndex = 0
+
+    Worksheets("2018").Activate
+
+    'loop over all the rows
+    For i = 2 To RowCount
+
+        If Cells(i, 1).Value = tickers(tickerIndex) Then
+
+            'increase totalVolume by the value in the current row
+            totalVolume(tickerIndex) = totalVolume(tickerIndex) + Cells(i, 8).Value
+
+        End If
+
+        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+
+            startingPrice(tickerIndex) = Cells(i, 6).Value
+
+        End If
+
+        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+
+            endingPrice(tickerIndex) = Cells(i, 6).Value
+            
+            Worksheets("All Stocks Analysis").Activate
+            
+            Cells(4 + tickerIndex, 1).Value = tickers(tickerIndex)
+            Cells(4 + tickerIndex, 2).Value = totalVolume(tickerIndex)
+            Cells(4 + tickerIndex, 3).Value = (endingPrice(tickerIndex) / startingPrice(tickerIndex)) - 1
+            
+            tickerIndex = tickerIndex + 1
+            
+            Worksheets("2018").Activate
+            
+        End If
+
 **Refactored Execution Time**
 
 ![VBA_Challenge_2017_Time_Elapsed](https://user-images.githubusercontent.com/71118429/95008561-d1bb1500-05cf-11eb-9861-b00f3883744e.png)
